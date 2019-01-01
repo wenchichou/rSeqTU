@@ -22,7 +22,12 @@ The rSeqTU R package has been tested on Mac and Linux OS.
 
 ### Install package
 ```R
+install.packages("devtools")
 library(devtools)
+if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+BiocManager::install("GenomicRanges", version = "3.8")
+
 install_github("s18692001/rSeqTU")
 library(rSeqTU)
 ```
